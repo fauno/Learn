@@ -1,0 +1,27 @@
+{% for item in site.menu %}
+  {% assign posts = site.categories[item.title] %}
+
+  {% for post in posts %}
+  {% endfor %}
+{% endfor %}
+
+
+
+lo que hace jekyll cuando lee los datos
+es agrupar todos los posts por sus categorias
+en un hash de ruby
+
+entonces, site.categories, contiene algo como:
+
+toda esta informacion sale del frontmatter de cada post, si coinciden
+las categorias se van a agrupar los posts
+
+{
+  "Getting Started" => [ post1, post2, post3 ],
+  "Native Tokens" => [ post1 ]
+}
+
+cuando hacemos un for de site.categories, cada item va a ser el par de
+categoria y sus posts.
+
+ pair[0] => pair[1]
