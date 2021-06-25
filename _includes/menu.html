@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg menu_one dark_menu display_none sticky-nav">
   <div class="container custom_container">
     <a class="navbar-brand header_logo" href="#">
-      <img class="first_logo sticky_logo main_logo" src="/img/logo.png" srcset="../../img/logo-2x.png 2x" alt="logo">
-      <img class="white_logo" src="/img/logo-w.png" srcset="/img/logo-w2x.png 2x" alt="logo">
+      <img class="first_logo sticky_logo main_logo" src="{{ '/img/logo.png' | absolute_url }}" srcset="../../img/logo-2x.png 2x" alt="logo">
+      <img class="white_logo" src="{{ '/img/logo-w.png' | absolute_url }}" srcset="/img/logo-w2x.png 2x" alt="logo">
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="menu_toggle">
@@ -23,9 +23,9 @@
           <a href="#" class="nav-link dropdown-toggle">Getting Started</a>
             <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false" data-toggle="dropdown"></i>
             <ul class="dropdown-menu">
-              <li class="nav-item"><a href="/why-cardano/" class="nav-link">Why Build On Cardano</a></li>
-              <li class="nav-item"><a href="/running-a-full-node/" class="nav-link">Running a Full Cardano Node</a></li>
-              <li class="nav-item"><a href="/keys-and-addresses/" class="nav-link">Wallets Basics: Keys and Addresses</a></li>
+              <li class="nav-item"><a href="{{ '/why-cardano/' | absolute_url }}" class="nav-link">Why Build On Cardano</a></li>
+              <li class="nav-item"><a href="{{ '/running-a-full-node/' | absolute_url }}" class="nav-link">Running a Full Cardano Node</a></li>
+              <li class="nav-item"><a href="{{ '/keys-and-addresses/' | absolute_url }}" class="nav-link">Wallets Basics: Keys and Addresses</a></li>
               <!-- <li class="nav-item"><a href="#" class="nav-link">Wallets HD: Mnemonic Phrases</a></li> -->
               <li class="nav-item"><a href="#" class="nav-link">Transactions: UTxOs and Metadata</a></li>
             </ul>
