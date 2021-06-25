@@ -62,7 +62,7 @@ layout: default
                             target="_blank"
                             rel="noopener noreferrer"
                           {% endif %}
-                          href="{{ post.url }}">
+                          href="{{ post.url | absolute_url }}">
                           {{ post.title }}
                         </a>
                       </li>
