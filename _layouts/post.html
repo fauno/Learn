@@ -39,36 +39,11 @@ layout: default
           <div class="scroll">
             <ul class="list-unstyled nav-sidebar">
               <li class="nav-item">
-                <a href="" class="nav-link"><img src="{{ '/img/side-nav/home.png' | absolute_url }}" alt="">Home</a>
+                <a href="{{ site.url | absolute_url }}" class="nav-link"><img src="/img/side-nav/home.png" alt="">Home</a>
               </li>
 
               {% for item in site.menu %}
-                {% assign posts = site.categories[item.title] | default: item.links %}
-
-                <li class="nav-item active">
-                  <a href="#" class="nav-link">
-                    <img src="{{ '/img/side-nav/' | absolute_url }}{{ item.icon }}" alt="{{ item.alt }}">
-
-                    {{ item.title }}
-                  </a>
-
-                  <span class="icon"><i class="arrow_carrot-down"></i></span>
-
-                  <ul class="list-unstyled dropdown_nav">
-                    {% for post in posts %}
-                      <li>
-                        <a
-                          {% if post.external %}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          {% endif %}
-                          href="{{ post.url | absolute_url }}">
-                          {{ post.title }}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
+                {% include menu_item_category.html page=page item=item %}
               {% endfor %}
             </ul>
           </div>
