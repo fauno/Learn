@@ -8,7 +8,7 @@ Creates a category item with its icon and post list
 <li class="nav-item {% if include.page.category[0] == item.title %}active{% endif %}">
   <a href="#" class="nav-link">
     {% if include.item.icon %}
-      <img src="{{ '/img/side-nav/' | append: include.item.icon | absolute_url }}" alt="{{ include.item.alt }}">
+      <img src="{{ '/img/side-nav/' | append: include.item.icon | relative_url }}" alt="{{ include.item.alt }}">
     {% endif %}
 
     {{ include.item.title }}

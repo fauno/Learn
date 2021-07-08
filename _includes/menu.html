@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg menu_one dark_menu display_none sticky-nav">
   <div class="container custom_container">
     <a class="navbar-brand header_logo" href="#">
-      <img class="first_logo sticky_logo main_logo" src="{{ '/img/logo.png' | absolute_url }}" srcset="../../img/logo-2x.png 2x" alt="logo">
-      <img class="white_logo" src="{{ '/img/logo-w.png' | absolute_url }}" srcset="/img/logo-w2x.png 2x" alt="logo">
+      <img class="first_logo sticky_logo main_logo" src="{{ '/img/logo.png' | relative_url }}" srcset="{{ '/img/logo-2x.png' | relative_url }} 2x" alt="logo">
+      <img class="white_logo" src="{{ '/img/logo-w.png' | relative_url }}" srcset="{{ '/img/logo-w2x.png' | relative_url }} 2x" alt="logo">
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="menu_toggle">
@@ -51,7 +51,7 @@
                             <div class="d-flex">
                               <ul class="list-unstyled tab_list w-100">
                                 {% for post in posts %}
-                                  <li><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></li>
+                                  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                                 {% endfor %}
                               </ul>
                             </div>
@@ -82,7 +82,7 @@
                           rel="noopener noreferrer"
                         {% endif %}
                         {% if page.url == post.url %}class="active"{% endif %}
-                          href="{{ post.url | absolute_url }}" class="nav-link">
+                          href="{{ post.url | relative_url }}" class="nav-link">
                         {{- post.title -}}
                       </a>
                     </li>

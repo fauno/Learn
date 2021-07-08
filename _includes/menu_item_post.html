@@ -12,7 +12,7 @@ Creates a single post item
       rel="noopener noreferrer"
     {% endif %}
     {% if include.page.url == include.post.url %}class="active"{% endif %}
-    href="{{ include.post.url | absolute_url }}">
+    href="{{ include.post.url | relative_url }}">
     {{ include.post.title }}
   </a>
 </li>

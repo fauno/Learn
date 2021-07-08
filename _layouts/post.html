@@ -39,7 +39,7 @@ layout: default
           <div class="scroll">
             <ul class="list-unstyled nav-sidebar">
               <li class="nav-item">
-                <a href="{{ site.url | absolute_url }}" class="nav-link"><img src="/img/side-nav/home.png" alt="">Home</a>
+                <a href="{{ site.url | relative_url }}" class="nav-link"><img src="{{ '/img/side-nav/home.png' | relative_url }}" alt="">Home</a>
               </li>
 
               {% for item in site.menu %}
