@@ -57,7 +57,10 @@ layout: default
               <h1>{{ page.title }}</h1>
             </div>
 
-            {{ content | replace: '<img ', '<img class="img-fluid" ' | replace: '<ol>', '<ol class="ordered-list">' }}
+            {% assign baseurl = '/' | relative_url %}
+            {% assign basesrc = ' src="' | append: baseurl %}
+            {% assign basehref = ' href="' | append: baseurl %}
+            {{ content | replace: '<img ', '<img class="img-fluid" ' | replace: '<ol>', '<ol class="ordered-list">' | replace: ' src="/', basesrc | replace: ' href="/', basehref }}
 
             <footer>
               <div class="border_bottom"></div>
